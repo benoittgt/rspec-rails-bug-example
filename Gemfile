@@ -1,4 +1,4 @@
-ruby '2.7.0'
+ruby '2.6.3'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'puma', '~> 4.1'
@@ -8,12 +8,10 @@ group :development, :test do
   gem 'capybara', '~> 3.13'
   gem 'letter_opener', '~> 1.7'
 
-  # https://github.com/rspec/rspec-rails/issues/2290
-  # --> THIS WORKS
-  # gem 'rspec-rails', '4.0.0.beta4'
-
-  # --> THIS DOES NOT WORK
-  gem 'rspec-rails', '4.0.0.rc1'
+  %w[rspec-core rspec-expectations rspec-mocks rspec-support].each do |lib|
+    gem lib, git: "https://github.com/rspec/#{lib}.git", branch: 'master'
+  end
+  gem 'rspec-rails', path: '../../rspec-dev/repos/rspec-rails'
 
   gem 'selenium-webdriver'
   gem 'webdrivers'

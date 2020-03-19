@@ -1,5 +1,49 @@
+GIT
+  remote: https://github.com/rspec/rspec-core.git
+  revision: 002ebcb65324bca7b3ee044e22f4c02133fce14d
+  branch: master
+  specs:
+    rspec-core (3.10.0.pre)
+      rspec-support (= 3.10.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-expectations.git
+  revision: 9f224eaeb5c6d7eaaab0f7f6e355efd9329328f8
+  branch: master
+  specs:
+    rspec-expectations (3.10.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.10.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-mocks.git
+  revision: 81c17e89b2722cb225d602e08b600e4a4f6148a4
+  branch: master
+  specs:
+    rspec-mocks (3.10.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.10.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-support.git
+  revision: 9cec8e858228ee1d1395e4e6186ac39c2a83d705
+  branch: master
+  specs:
+    rspec-support (3.10.0.pre)
+
+PATH
+  remote: ../../rspec-dev/repos/rspec-rails
+  specs:
+    rspec-rails (4.0.0.pre)
+      actionpack (>= 4.2)
+      activesupport (>= 4.2)
+      railties (>= 4.2)
+      rspec-core (= 3.10.0.pre)
+      rspec-expectations (= 3.10.0.pre)
+      rspec-mocks (= 3.10.0.pre)
+      rspec-support (= 3.10.0.pre)
+
 GEM
-  remote: https://rubygems.org/
   specs:
     actioncable (6.0.2.1)
       actionpack (= 6.0.2.1)
@@ -132,23 +176,6 @@ GEM
       thor (>= 0.20.3, < 2.0)
     rake (13.0.1)
     regexp_parser (1.7.0)
-    rspec-core (3.9.1)
-      rspec-support (~> 3.9.1)
-    rspec-expectations (3.9.1)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.9.0)
-    rspec-mocks (3.9.1)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.9.0)
-    rspec-rails (4.0.0.rc1)
-      actionpack (>= 4.2)
-      activesupport (>= 4.2)
-      railties (>= 4.2)
-      rspec-core (~> 3.9)
-      rspec-expectations (~> 3.9)
-      rspec-mocks (~> 3.9)
-      rspec-support (~> 3.9)
-    rspec-support (3.9.2)
     rubyzip (2.3.0)
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
@@ -184,12 +211,16 @@ DEPENDENCIES
   letter_opener (~> 1.7)
   puma (~> 4.1)
   rails (~> 6.0.2)
-  rspec-rails (= 4.0.0.rc1)
+  rspec-core!
+  rspec-expectations!
+  rspec-mocks!
+  rspec-rails!
+  rspec-support!
   selenium-webdriver
   webdrivers
 
 RUBY VERSION
-   ruby 2.7.0p0
+   ruby 2.6.3p62
 
 BUNDLED WITH
-   2.1.4
+   2.1.1
